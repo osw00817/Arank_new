@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/css/tailwind.css' />
+    <link rel='stylesheet' href='/css/star.css' />
+    <link rel='stylesheet' href='/css/font.css' />
+    <script src="/javascripts/add.js"></script>
+    <script src="/javascripts/search.js"></script>
+    <style>
+      .star{
+          background-image: url('https://image.flaticon.com/icons/png/512/130/130188.png');
+          background-size: cover;
+          background-repeat: no-repeat;
+          height:40px;
+          width:40px;
+      }
+      .star_checked {
+          background-image: url('data:image/png;base64,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');
+          background-size: cover;
+          background-repeat: no-repeat;
+          height:41px;
+          width:40px;
+      }
+  </style>
+  </head>
+  <body class="bg-gray-200" style="font-family: 'Noto Sans KR', sans-serif;">
+    <body class="bg-gray-200" style="font-family: 'Noto Sans KR', sans-serif;" >
+      <div class="flex flex-row  flex-wrap bg-white  h-16 sm:h-20 w-full">
+          <div class="w-0 xl:w-1/4 text-bold text-right text-2xl"></div>
+          <span class="my-auto text-right text-2xl">
+            <h1 class="Logo" style="cursor: pointer;" onclick="location.href='/'">Arank</h1>
+          </span>
+          
+          <div class="flex-1 flex flex-row">
+            <div class="ml-4 my-auto pt-2 relative mx-auto text-gray-600">
+              <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                type="search" id="search" placeholder="Search">
+              <button type="submit" onclick="search();" class="absolute right-0 top-0 mt-5 mr-4">
+                <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                  viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                  width="512px" height="512px">
+                  <path
+                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                </svg>
+              </button>
+            </div>
+            <span class="my-auto ml-8"><a href="/quarter">분기별 랭킹</a></span>
+            <span class="my-auto ml-8"><a href="/recommend">애니 추천받기</a></span>
+          </div>
+          <% if(login != false) { %>
+            <div class="xl:ml-12 bg-white my-auto flex flex-row xl:flex-1">
+               <span id="username" class="xl:ml-12 text-right my-auto h-8 w-24 text-black px-4 rounded">
+                <%= login.username %></span>
+              <img class="my-auto h-8" src="/images/profile.png" >
+            </div>
+          <% } else { %>
+          <div class="xl:ml-4 my-auto flex mr-4 xl:flex-1"><a href='/login'><button  class="xl:ml-24 h-8 w-24 hover:bg-gray-200 text-black hover:py-2 px-4 border border-gray-500 hover:border-transparent rounded">
+            로그인</button></a></div>
+      </div>
+      <% } %>
+    </div>
+      <div class="w-full xl:w-1/2 h-12 bg-white mx-auto mt-8">
+        <div class="flex flex-row text-xl p-2">
+          <h1><%= data[0]["제목"] %></h1>
+          <span class="flex-1 pl-4">
+          <% for(let a=0;a< star ;a++) {%>
+          <span class="fa fa-star checked"></span>
+          <% } %>
+          <% for(let a=0;a< 5-star ;a++) {%>
+            <span class="fa fa-star"></span>
+          <% } %>
+          </span>
+          <div id="id"><%= data[0]["id"] %></div>
+          </div>
+    </div>
+      <div class="flex flex-wrap bg-white w-auto xl:w-1/2 h-auto mx-auto mt-4">
+        <div class="p-5"><img style="height:400px; width:300px; background-color:gray;" src=<%= data[0]["img"] %>></div>
+        <div class="flex flex-col h-full xl:mt-5 text-black">
+            <% for(let i = 4; i< 16 ;i++) { %>
+                <div class="ml-4 xl:ml-0 mt-2 flex flex-row">
+                    <div class="w-32"><%= list[i-4] %></div>
+                    <div class="w-16 w-auto"><%= data[0][list[i-4]] %></div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <div class="xl:w-1/2 mt-8 bg-white h-48 mx-auto">
+        <h1 class="p-3">줄거리</h1>
+        <p class="px-3"><%= data[0]["줄거리"] %></p>
+    </div>
+    <div class="xl:w-1/2 flex-col mt-8 bg-white h-full mx-auto p-8">
+        <h1>평점</h1>
+        <div class="flex flex-row w-full h-24 mt-4 mb-8  border-solid border-2 border-gray-300">
+          <span id="check_list" class="flex  border-solid border-r-2 border-gray-300">
+            <script src="/javascripts/star.js"></script>
+            <div id="star1" class="star ml-8 mx-auto my-auto star_checked" onclick="check(1)"></div>
+            <div id="star2" class="star mx-auto my-auto" onclick="check(2)"></div>
+            <div id="star3" class="star mx-auto my-auto" onclick="check(3)"></div>
+            <div id="star4" class="star mx-auto my-auto" onclick="check(4)"></div>
+            <div id="star5" class="star mx-auto my-auto" onclick="check(5)"></div>
+            <h1 id="score" class="ml-4 my-auto w-auto">1</h1>
+            <h1 class="my-auto mr-8">점</h1>
+          </span>
+          <textarea id="comment" style="resize: none;" class="border-solid border-r-2 border-gray-300 w-full h-full"></textarea>
+          <div onclick="add();" class="w-2/6 h-full bg-blue-400 text-white"><p class="text-center mt-8">등록</p></div>
+        </div>
+        <div id="comment_list" class="w-full">
+         
+          <% for(let b=0;b< comment.length;b++) { %>
+            <div id="comment_block" class="flex-1 h-auto w-full border-solid border-t-2  border-gray-300 mb-4">
+                <h1 class="pt-4"><%= comment[b]['등록자닉네임'] %>
+                <% for(let a=0;a< comment[b]['평점'] ;a++) {%>
+                  <span class="fa fa-star checked"></span>
+                  <% } %>
+                  <% for(let a=0;a< 5-comment[b]['평점'] ;a++) {%>
+                    <span class="fa fa-star"></span>
+                  <% } %>
+                  </span>
+                </h1>
+              <div class="h-auto mt-2"><%= comment[b]['평론'] %></div>
+              <div class="h-auto mt-4 mb-1"><%= comment[b]['등록날짜'] %></div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      <div class="h-16"></div>
+      <% if(login != false) { %>
+        <textarea class="w-auto h-auto" id="userID" style="opacity: 0%;" readonly>
+          <%= login.id %>
+        </textarea>
+      <% } %>
+  </body>
+</html>
+  
